@@ -1,10 +1,10 @@
 package oop_labs;
 
 public class Ball {
-	int x, y, w, h, dirX, dirY;
-	static int wx, wy, ww, wh;
+	public int x, y, w, h, dirX, dirY;
+	public static int wx, wy, ww, wh;
 	
-	ShapeType shapeType;
+	public ShapeType shapeType;
 
 	public Ball(int x, int y, int w, int h, int dirX, int dirY, ShapeType t) {
 		this.shapeType = t;
