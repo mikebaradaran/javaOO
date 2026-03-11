@@ -1,21 +1,20 @@
 package oop_labs;
 
+import java.util.*;
+
 public class Program2 {
 
 	public static void main(String[] args) {
 
-		System.out.println("Starting...");
-		String name = "";
+		List<String> friends = new ArrayList<>();
+		friends.add("Tom"); 			
+		friends.add("Sue"); 
+		friends.add("Sanjeev");
 		
-		StringBuilder builder = new StringBuilder();
-		
-		for (int i = 1; i < 1000000; i++) {
-			builder.append("."); 
+		for(String name : friends) {
+			System.out.println(name);
 		}
-		
-		name = builder.toString();
-		
-		System.out.println(name);
+
 	}
 
 }

@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -16,14 +18,23 @@ public class Game extends Canvas {
 		new Game();
 	}
 
-	Ball[] balls = new Ball[4];
+//	Ball[] balls = new Ball[4];
+	
+	List<Ball> balls = new ArrayList<>();
 
 	Game() {
 
-		balls[0] = new Ball(100, 50, 40, 30, 1, 2, ShapeType.Oval);
-		balls[1] = new Ball(50, 50, 30, 30, 2, 3, ShapeType.Rectangle);
-		balls[2] = new Ball(150, 70, 150, 90, 3, 2, ShapeType.Arc);
-		balls[3] = new Ball(100, 40, 30, 20, 3, 2);
+//		balls[0] = new Ball(100, 50, 40, 30, 1, 2, ShapeType.Oval);
+//		balls[1] = new Ball(50, 50, 30, 30, 2, 3, ShapeType.Rectangle);
+//		balls[2] = new Ball(150, 70, 150, 90, 3, 2, ShapeType.Arc);
+//		balls[3] = new Ball(100, 40, 30, 20, 3, 2);
+		
+		balls.add( new Ball(100, 50, 40, 30, 1, 2, ShapeType.Oval));
+		balls.add( new Ball(50, 50, 30, 30, 2, 3, ShapeType.Rectangle));
+		balls.add( new Ball(150, 70, 150, 90, 3, 2, ShapeType.Arc));
+		balls.add( new Ball(100, 40, 30, 20, 3, 2));
+		
+		// balls.remove(1);
 
 		JFrame frame = new JFrame();
 		this.setSize(Ball.ww + Ball.wx * 2, Ball.wh + Ball.wy *2);
